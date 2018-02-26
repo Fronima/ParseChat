@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		330E7C7723ED870CFA5E189A /* Pods_ParseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE784A260BA47D267BE54B5A /* Pods_ParseChat.framework */; };
 		420D117A156D0AB13FCE3A21 /* Pods_ParseChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE86561A46B554D5533A867A /* Pods_ParseChatTests.framework */; };
+		BD9AF42820412BBA00E6EB2E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AF42720412BBA00E6EB2E /* SignUpViewController.swift */; };
+		BD9AF42B2041E1AF00E6EB2E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AF42A2041E1AF00E6EB2E /* ChatViewController.swift */; };
+		BD9AF42E204241AD00E6EB2E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AF42D204241AD00E6EB2E /* MessageCell.swift */; };
+		BD9AF43020428CA900E6EB2E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AF42F20428CA900E6EB2E /* Post.swift */; };
 		BDDADBE7203B7C5D0094D6A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDADBE6203B7C5D0094D6A6 /* AppDelegate.swift */; };
-		BDDADBE9203B7C5D0094D6A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDADBE8203B7C5D0094D6A6 /* ViewController.swift */; };
+		BDDADBE9203B7C5D0094D6A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDADBE8203B7C5D0094D6A6 /* LoginViewController.swift */; };
 		BDDADBEC203B7C5D0094D6A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDADBEA203B7C5D0094D6A6 /* Main.storyboard */; };
 		BDDADBEF203B7C5D0094D6A6 /* ParseChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDDADBED203B7C5D0094D6A6 /* ParseChat.xcdatamodeld */; };
 		BDDADBF1203B7C5D0094D6A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDADBF0203B7C5D0094D6A6 /* Assets.xcassets */; };
@@ -44,9 +48,13 @@
 		97C5C334E25F2C75F6A0A29C /* Pods-ParseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChat/Pods-ParseChat.debug.xcconfig"; sourceTree = "<group>"; };
 		B2546447454733843797616E /* Pods-ParseChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChatUITests/Pods-ParseChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3B98D0D3F9D668C082D1C99 /* Pods_ParseChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9AF42720412BBA00E6EB2E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BD9AF42A2041E1AF00E6EB2E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BD9AF42D204241AD00E6EB2E /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		BD9AF42F20428CA900E6EB2E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BDDADBE3203B7C5D0094D6A6 /* ParseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDADBE6203B7C5D0094D6A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDDADBE8203B7C5D0094D6A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDDADBE8203B7C5D0094D6A6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BDDADBEB203B7C5D0094D6A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDDADBEE203B7C5D0094D6A6 /* ParseChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParseChat.xcdatamodel; sourceTree = "<group>"; };
 		BDDADBF0203B7C5D0094D6A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +122,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD9AF42920412BC000E6EB2E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDDADBE8203B7C5D0094D6A6 /* LoginViewController.swift */,
+				BD9AF42720412BBA00E6EB2E /* SignUpViewController.swift */,
+				BD9AF42A2041E1AF00E6EB2E /* ChatViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD9AF42C2042418500E6EB2E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AF42D204241AD00E6EB2E /* MessageCell.swift */,
+				BD9AF42F20428CA900E6EB2E /* Post.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		BDDADBDA203B7C5D0094D6A6 = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				BDDADBE6203B7C5D0094D6A6 /* AppDelegate.swift */,
-				BDDADBE8203B7C5D0094D6A6 /* ViewController.swift */,
+				BD9AF42920412BC000E6EB2E /* ViewControllers */,
+				BD9AF42C2042418500E6EB2E /* views */,
 				BDDADBEA203B7C5D0094D6A6 /* Main.storyboard */,
 				BDDADBF0203B7C5D0094D6A6 /* Assets.xcassets */,
 				BDDADBF2203B7C5E0094D6A6 /* LaunchScreen.storyboard */,
@@ -463,9 +491,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDDADBE9203B7C5D0094D6A6 /* ViewController.swift in Sources */,
+				BDDADBE9203B7C5D0094D6A6 /* LoginViewController.swift in Sources */,
 				BDDADBE7203B7C5D0094D6A6 /* AppDelegate.swift in Sources */,
+				BD9AF42820412BBA00E6EB2E /* SignUpViewController.swift in Sources */,
+				BD9AF42B2041E1AF00E6EB2E /* ChatViewController.swift in Sources */,
 				BDDADBEF203B7C5D0094D6A6 /* ParseChat.xcdatamodeld in Sources */,
+				BD9AF43020428CA900E6EB2E /* Post.swift in Sources */,
+				BD9AF42E204241AD00E6EB2E /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
