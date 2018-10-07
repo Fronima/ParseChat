@@ -52,9 +52,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bh0-U8-5Pt">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bh0-U8-5Pt">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
@@ -68,12 +67,14 @@
                             <constraint firstItem="fRU-Kq-OCa" firstAttribute="centerX" secondItem="Zpz-fk-Qsb" secondAttribute="centerX" id="Scc-11-9IO"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="18z-08-cAH" secondAttribute="trailing" constant="20" symbolic="YES" id="T9v-sN-knl"/>
                             <constraint firstItem="18z-08-cAH" firstAttribute="top" secondItem="fRU-Kq-OCa" secondAttribute="bottom" constant="16" id="XrG-ZR-iIx"/>
+                            <constraint firstItem="bh0-U8-5Pt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="at6-L4-Vps"/>
                             <constraint firstItem="8K2-qp-ufT" firstAttribute="top" secondItem="fRU-Kq-OCa" secondAttribute="bottom" constant="16" id="cK2-PF-fAL"/>
                             <constraint firstItem="f18-Bl-fhv" firstAttribute="top" secondItem="Zpz-fk-Qsb" secondAttribute="bottom" constant="16" id="dsu-m7-Cd8"/>
                             <constraint firstItem="fRU-Kq-OCa" firstAttribute="top" secondItem="f18-Bl-fhv" secondAttribute="bottom" constant="16" id="mzR-5y-5a7"/>
                             <constraint firstItem="f18-Bl-fhv" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="2:3" id="s85-2z-L64"/>
                             <constraint firstItem="18z-08-cAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" multiplier="1:6" id="tvb-bq-Y4h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8K2-qp-ufT" secondAttribute="trailing" multiplier="6:5" id="wUO-UZ-kyX"/>
+                            <constraint firstItem="bh0-U8-5Pt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVf-LA-pXN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -180,7 +181,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CPJ-o5-lVF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="kM4-AN-bdA"/>
+                    <navigationItem key="navigationItem" title="Chat" id="8DS-9Q-r8a"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="chatBar" destination="dqf-5Y-rdj" id="66u-Pn-r8g"/>
                         <outlet property="send" destination="ddE-1U-kUi" id="d68-FU-9We"/>

@@ -20,14 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
             configuration.applicationId = "CodePath-Parse"
+            
             configuration.server = "https://parsechatcodepath.herokuapp.com/parse"
-            //"http://45.79.67.127:1337/parse"
+            
             
         }))
         
         if let currentUser = PFUser.current() {
             print("Welcome back \(currentUser.username) 😀")
-            
+           
             let storyBoard = UIStoryboard(name: "Main", bundle: nil )
             let chatViewController = storyBoard.instantiateViewController(withIdentifier: "ChatViewController")
             window?.rootViewController = chatViewController

@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        activityIndicator.hidesWhenStopped = true
+         
     }
     
     @IBAction func sign_up(_ sender: Any) {
@@ -32,13 +34,18 @@ class LoginViewController: UIViewController {
         if(isEmpty){
             
             let alertController = UIAlertController(title: "Password is Required", message: "Please enter Password", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+             self.present(alertController, animated: true, completion: nil)
         }
     }
     func showUsernameAlert(isEmpty: Bool){
         if(isEmpty){
             
             let alertController = UIAlertController(title: "Username is Required", message: "Please enter Username", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
+        
     }
     
     func loginUser() {
@@ -49,13 +56,19 @@ class LoginViewController: UIViewController {
         showPasswdAlert(isEmpty: password.isEmpty)
         showUsernameAlert(isEmpty: username.isEmpty)
         
+        activityIndicator.startAnimating()
         PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
             if let error = error {
                 print("User log in failed: \(error.localizedDescription)")
+                let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                self.activityIndicator.stopAnimating()
             } else {
                 print("User logged in successfully")
                 // display view controller that needs to shown after successful login
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                
             }
         }
     }
@@ -73,10 +86,14 @@ class LoginViewController: UIViewController {
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if let error = error {
                 print(error.localizedDescription)
+                let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             } else {
                 print("User Registered successfully")
                 // manually segue to logged in view
                 //self.performSegue(withIdentifier: "pushSegue" , sender: self)
+                
             }
         }
     }
